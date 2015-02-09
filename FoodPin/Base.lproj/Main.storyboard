@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5vn-bQ-Yp2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qdr-1M-yPB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Restaurant Table View Controller-->
+        <!--Food Pin-->
         <scene sceneID="Cx8-8q-LJN">
             <objects>
                 <tableViewController id="5vn-bQ-Yp2" customClass="RestaurantTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="VPg-lB-aQL" customClass="CustomTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="VPg-lB-aQL" customClass="CustomTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPg-lB-aQL" id="1gh-sK-5Va">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -50,6 +51,7 @@
                                     <outlet property="nameLabel" destination="f2z-nT-mcw" id="NJu-7S-WEZ"/>
                                     <outlet property="thumbnailImageView" destination="hmK-j2-iOI" id="ohO-jJ-eO3"/>
                                     <outlet property="typeLabel" destination="tB6-fV-DpS" id="P1W-9U-1xO"/>
+                                    <segue destination="XAT-3R-jY4" kind="push" identifier="showRestaurantDetail" id="MCi-Fw-VYG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,8 +60,93 @@
                             <outlet property="delegate" destination="5vn-bQ-Yp2" id="LeV-NM-DYT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Food Pin" id="tAt-D1-KJk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6A-Ni-s8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="117"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="O8a-AL-kiq">
+            <objects>
+                <viewController id="XAT-3R-jY4" customClass="DetailViewController" customModule="FoodPin" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dhk-5R-zk1"/>
+                        <viewControllerLayoutGuide type="bottom" id="73T-27-JvF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZyT-W7-1b7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnW-gB-Bk8">
+                                <rect key="frame" x="0.0" y="72" width="320" height="32"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRZ-Xi-7Xv">
+                                <rect key="frame" x="16" y="101" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-N3-k2a">
+                                <rect key="frame" x="16" y="130" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zw5-Eb-6kF">
+                                <rect key="frame" x="0.0" y="203" width="320" height="250"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hFr-N3-k2a" firstAttribute="top" secondItem="LnW-gB-Bk8" secondAttribute="bottom" constant="26" id="6yM-0T-BaD"/>
+                            <constraint firstItem="hFr-N3-k2a" firstAttribute="leading" secondItem="zRZ-Xi-7Xv" secondAttribute="leading" id="7Zn-ua-Rsa"/>
+                            <constraint firstItem="zRZ-Xi-7Xv" firstAttribute="leading" secondItem="ZyT-W7-1b7" secondAttribute="leadingMargin" id="AR5-tu-IwR"/>
+                            <constraint firstItem="LnW-gB-Bk8" firstAttribute="leading" secondItem="Zw5-Eb-6kF" secondAttribute="leading" id="CZa-OD-C4D"/>
+                            <constraint firstItem="LnW-gB-Bk8" firstAttribute="trailing" secondItem="Zw5-Eb-6kF" secondAttribute="trailing" id="Df9-og-rwa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zRZ-Xi-7Xv" secondAttribute="trailing" constant="-32" id="PGg-2x-AKF"/>
+                            <constraint firstAttribute="trailing" secondItem="LnW-gB-Bk8" secondAttribute="trailing" id="R8O-sz-m9P"/>
+                            <constraint firstItem="Zw5-Eb-6kF" firstAttribute="centerY" secondItem="ZyT-W7-1b7" secondAttribute="centerY" constant="44" id="TYS-oc-2pS"/>
+                            <constraint firstItem="zRZ-Xi-7Xv" firstAttribute="leading" secondItem="ZyT-W7-1b7" secondAttribute="leadingMargin" id="ZuM-ri-AKN"/>
+                            <constraint firstItem="Zw5-Eb-6kF" firstAttribute="top" secondItem="hFr-N3-k2a" secondAttribute="bottom" constant="52" id="lAh-OX-Wgf"/>
+                            <constraint firstItem="hFr-N3-k2a" firstAttribute="top" secondItem="ZyT-W7-1b7" secondAttribute="top" constant="130" id="m3f-Gj-Isp"/>
+                            <constraint firstItem="hFr-N3-k2a" firstAttribute="trailing" secondItem="zRZ-Xi-7Xv" secondAttribute="trailing" id="nvE-Bz-iYX"/>
+                            <constraint firstItem="hFr-N3-k2a" firstAttribute="top" secondItem="zRZ-Xi-7Xv" secondAttribute="bottom" constant="8" symbolic="YES" id="oCM-WS-Nat"/>
+                            <constraint firstItem="LnW-gB-Bk8" firstAttribute="leading" secondItem="ZyT-W7-1b7" secondAttribute="leading" id="qdo-6D-s1G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zRZ-Xi-7Xv" secondAttribute="trailing" constant="-32" id="w2O-vD-c1Y"/>
+                            <constraint firstItem="LnW-gB-Bk8" firstAttribute="top" secondItem="Dhk-5R-zk1" secondAttribute="bottom" constant="8" symbolic="YES" id="wEj-1L-8S0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C4O-Je-2KT"/>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="Zw5-Eb-6kF" id="stz-5s-uux"/>
+                        <outlet property="restaurantLocationLabel" destination="zRZ-Xi-7Xv" id="dgH-Nh-YDB"/>
+                        <outlet property="restaurantNameLabel" destination="LnW-gB-Bk8" id="CfK-fJ-KCG"/>
+                        <outlet property="restaurantTypeLabel" destination="hFr-N3-k2a" id="2L6-jZ-Ly7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pR-Pk-LRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pYk-TW-3TN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qdr-1M-yPB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KJD-Z2-Yd1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5vn-bQ-Yp2" kind="relationship" relationship="rootViewController" id="VLu-Pe-jCB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CA0-8X-V8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120" y="117"/>
         </scene>

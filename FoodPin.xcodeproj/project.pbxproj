@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A34882CE1A88E186002D4FAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34882CD1A88E186002D4FAB /* Images.xcassets */; };
+		A34882D21A8916E5002D4FAB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34882D11A8916E5002D4FAB /* DetailViewController.swift */; };
 		A35FEFD21A86097300D6F435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FEFD11A86097300D6F435 /* AppDelegate.swift */; };
 		A35FEFD71A86097300D6F435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35FEFD51A86097300D6F435 /* Main.storyboard */; };
 		A35FEFDC1A86097300D6F435 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35FEFDA1A86097300D6F435 /* LaunchScreen.xib */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		A34882CD1A88E186002D4FAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A34882D11A8916E5002D4FAB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		A35FEFCC1A86097300D6F435 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35FEFD01A86097300D6F435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A35FEFD11A86097300D6F435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				A35FEFD11A86097300D6F435 /* AppDelegate.swift */,
 				A35FEFD51A86097300D6F435 /* Main.storyboard */,
 				A35FEFF31A86657B00D6F435 /* CustomTableViewCell.swift */,
+				A34882D11A8916E5002D4FAB /* DetailViewController.swift */,
 				A35FEFDA1A86097300D6F435 /* LaunchScreen.xib */,
 				A34882CD1A88E186002D4FAB /* Images.xcassets */,
 				A35FEFCF1A86097300D6F435 /* Supporting Files */,
@@ -219,6 +222,7 @@
 				A35FEFF41A86657B00D6F435 /* CustomTableViewCell.swift in Sources */,
 				A35FEFF21A860AA100D6F435 /* RestaurantTableViewController.swift in Sources */,
 				A35FEFD21A86097300D6F435 /* AppDelegate.swift in Sources */,
+				A34882D21A8916E5002D4FAB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

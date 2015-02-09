@@ -12,6 +12,18 @@ class RestaurantTableViewController: UITableViewController {
     var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London", "London"]
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American Sea Food", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai", "Thai"]
     var restaurantIsVisited = [Bool](count: 21, repeatedValue: false)
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                let destinationController = segue.destinationViewController as DetailViewController
+                destinationController.restaurantImage = self.restaurantImages[indexPath.row]
+                destinationController.restaurantName = self.restaurantNames[indexPath.row]
+                destinationController.restaurantLocation = restaurantLocations[indexPath.row]
+                destinationController.restaurantType = restaurantTypes[indexPath.row]
+            }
+        }
+    }
                                                                                                                                                                                                                                             
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -40,40 +52,6 @@ class RestaurantTableViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .ActionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        let callActionHandler = { (action: UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not avaiable yet. Please retry later", preferredStyle: .Alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alertMessage, animated: true, completion: nil) }
-        let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .Default, handler: callActionHandler)
-        let isVisitedAction = UIAlertAction(title: "I've been here", style: .Default, handler: {
-            (action: UIAlertAction!) -> Void in
-            let cell = tableView.cellForRowAtIndexPath(indexPath) as CustomTableViewCell
-            cell.isVisitedImageView.hidden = false
-            self.restaurantIsVisited[indexPath.row] = true
-        })
-        let notVisitedAction = UIAlertAction(title: "I've not been here", style: .Default, handler: {
-            (action: UIAlertAction!) -> Void in
-            let cell = tableView.cellForRowAtIndexPath(indexPath) as CustomTableViewCell
-            cell.isVisitedImageView.hidden = true
-            self.restaurantIsVisited[indexPath.row] = false
-        })
-        
-        optionMenu.addAction(callAction)
-        optionMenu.addAction(cancelAction)
-        if restaurantIsVisited[indexPath.row] {
-            optionMenu.addAction(notVisitedAction)
-        } else {
-            optionMenu.addAction(isVisitedAction)
-        }
-        
-        self.presentViewController(optionMenu, animated: true, completion: nil)
-        
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
