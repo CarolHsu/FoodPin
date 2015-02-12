@@ -40,6 +40,11 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func close(segue: UIStoryboardSegue) {
+        
+    }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
