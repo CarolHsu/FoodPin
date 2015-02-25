@@ -18,6 +18,8 @@
 		A35FEFF21A860AA100D6F435 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FEFF11A860AA100D6F435 /* RestaurantTableViewController.swift */; };
 		A35FEFF41A86657B00D6F435 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FEFF31A86657B00D6F435 /* CustomTableViewCell.swift */; };
 		A3852E031A8A42B9002A63BE /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3852E021A8A42B9002A63BE /* DetailTableViewCell.swift */; };
+		A3DB05081A9DD985001636C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DB05071A9DD985001636C1 /* MapKit.framework */; };
+		A3DB050A1A9DF8C5001636C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DB05091A9DF8C5001636C1 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		A35FEFF11A860AA100D6F435 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		A35FEFF31A86657B00D6F435 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A3852E021A8A42B9002A63BE /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		A3DB05071A9DD985001636C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A3DB05091A9DF8C5001636C1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DB05081A9DD985001636C1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,7 @@
 		A35FEFC31A86097300D6F435 = {
 			isa = PBXGroup;
 			children = (
+				A3DB05071A9DD985001636C1 /* MapKit.framework */,
 				A35FEFCE1A86097300D6F435 /* FoodPin */,
 				A35FEFE41A86097300D6F435 /* FoodPinTests */,
 				A35FEFCD1A86097300D6F435 /* Products */,
@@ -89,6 +95,7 @@
 			children = (
 				A35FEFD11A86097300D6F435 /* AppDelegate.swift */,
 				A35FEFD51A86097300D6F435 /* Main.storyboard */,
+				A3DB05091A9DF8C5001636C1 /* MapViewController.swift */,
 				A316F22A1A8CFB0900936A61 /* ReviewViewController.swift */,
 				A35FEFF31A86657B00D6F435 /* CustomTableViewCell.swift */,
 				A34882D11A8916E5002D4FAB /* DetailViewController.swift */,
@@ -177,6 +184,11 @@
 					A35FEFCB1A86097300D6F435 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = BB9UPJ53C6;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A35FEFE01A86097300D6F435 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -235,6 +247,7 @@
 				A35FEFF21A860AA100D6F435 /* RestaurantTableViewController.swift in Sources */,
 				A35FEFD21A86097300D6F435 /* AppDelegate.swift in Sources */,
 				A34882D21A8916E5002D4FAB /* DetailViewController.swift in Sources */,
+				A3DB050A1A9DF8C5001636C1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
