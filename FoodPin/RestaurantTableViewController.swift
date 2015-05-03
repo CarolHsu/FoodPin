@@ -8,6 +8,10 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
 
+    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
+        
+    }
+    
     var restaurants: [Restaurant] = []
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
