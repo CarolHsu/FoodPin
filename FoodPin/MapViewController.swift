@@ -25,7 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 return
             }
             if placemarks != nil && placemarks.count > 0 {
-                let placemark = placemarks[0] as CLPlacemark
+                let placemark = placemarks[0] as! CLPlacemark
                 let annotation = MKPointAnnotation()
                 annotation.title = self.restaurant.name
                 annotation.subtitle = self.restaurant.type
@@ -53,7 +53,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotationView.canShowCallout = true
         }
         let leftIconView = UIImageView(frame: CGRectMake(0, 0, 53, 53))
-        leftIconView.image = UIImage(named: restaurant.image!)
+        leftIconView.image = UIImage(data: restaurant.image!)
         annotationView.leftCalloutAccessoryView = leftIconView
         
         return annotationView

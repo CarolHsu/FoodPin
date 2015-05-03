@@ -17,7 +17,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMap" {
-            let destinationController = segue.destinationViewController as MapViewController
+            let destinationController = segue.destinationViewController as! MapViewController
             destinationController.restaurant = restaurant
         }
     }
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
-        restaurantImageView.image = UIImage(named: restaurant.image!)
+        restaurantImageView.image = UIImage(data: restaurant.image!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +58,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as DetailTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DetailTableViewCell
         cell.mapButton.hidden = true
         switch indexPath.row {
         case 0:
@@ -73,7 +73,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.mapButton.hidden = false
         case 3:
             cell.fieldLabel.text = "Been here?"
-            cell.valueLabel.text = restaurant.isVisited ? "Yes, I've been here before." : "No"
+            cell.valueLabel.text = restaurant.isVisited.boolValue ? "Yes, I've been here before." : "No"
         case 4:
             cell.fieldLabel.text = "Phone"
             cell.valueLabel.text = restaurant.phone

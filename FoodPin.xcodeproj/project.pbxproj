@@ -20,6 +20,7 @@
 		A3852E031A8A42B9002A63BE /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3852E021A8A42B9002A63BE /* DetailTableViewCell.swift */; };
 		A3DB05081A9DD985001636C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DB05071A9DD985001636C1 /* MapKit.framework */; };
 		A3DB050A1A9DF8C5001636C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DB05091A9DF8C5001636C1 /* MapViewController.swift */; };
+		A3FB573B1AF6590700487899 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3FB57391AF6590700487899 /* FoodPin.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		A3852E021A8A42B9002A63BE /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		A3DB05071A9DD985001636C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A3DB05091A9DF8C5001636C1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A3FB573A1AF6590700487899 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		A35FEFCE1A86097300D6F435 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB57391AF6590700487899 /* FoodPin.xcdatamodeld */,
 				A35FEFD11A86097300D6F435 /* AppDelegate.swift */,
 				A35FEFD51A86097300D6F435 /* Main.storyboard */,
 				A3DB05091A9DF8C5001636C1 /* MapViewController.swift */,
@@ -248,6 +251,7 @@
 				A35FEFD21A86097300D6F435 /* AppDelegate.swift in Sources */,
 				A34882D21A8916E5002D4FAB /* DetailViewController.swift in Sources */,
 				A3DB050A1A9DF8C5001636C1 /* MapViewController.swift in Sources */,
+				A3FB573B1AF6590700487899 /* FoodPin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +459,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3FB57391AF6590700487899 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3FB573A1AF6590700487899 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = A3FB573A1AF6590700487899 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A35FEFC41A86097300D6F435 /* Project object */;
 }
