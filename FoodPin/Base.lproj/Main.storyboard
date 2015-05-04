@@ -256,7 +256,7 @@
         <!--New Restaurant-->
         <scene sceneID="Jjs-lY-HXa">
             <objects>
-                <tableViewController id="xEx-59-S5I" sceneMemberID="viewController">
+                <tableViewController id="xEx-59-S5I" customClass="AddTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vrh-zW-ggq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -377,6 +377,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="PNz-jR-KAY" id="QNB-Bi-LrD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRh-RK-1vG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fbq-qO-Pp2" userLabel="Exit" sceneMemberID="exit"/>

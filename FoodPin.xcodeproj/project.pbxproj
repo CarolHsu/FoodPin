@@ -21,6 +21,7 @@
 		A3DB05081A9DD985001636C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DB05071A9DD985001636C1 /* MapKit.framework */; };
 		A3DB050A1A9DF8C5001636C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DB05091A9DF8C5001636C1 /* MapViewController.swift */; };
 		A3FB573B1AF6590700487899 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3FB57391AF6590700487899 /* FoodPin.xcdatamodeld */; };
+		A3FB573F1AF679B400487899 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB573E1AF679B400487899 /* AddTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A3DB05071A9DD985001636C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A3DB05091A9DF8C5001636C1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A3FB573A1AF6590700487899 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		A3FB573E1AF679B400487899 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		A35FEFCE1A86097300D6F435 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB573E1AF679B400487899 /* AddTableViewController.swift */,
 				A3FB57391AF6590700487899 /* FoodPin.xcdatamodeld */,
 				A35FEFD11A86097300D6F435 /* AppDelegate.swift */,
 				A35FEFD51A86097300D6F435 /* Main.storyboard */,
@@ -252,6 +255,7 @@
 				A34882D21A8916E5002D4FAB /* DetailViewController.swift in Sources */,
 				A3DB050A1A9DF8C5001636C1 /* MapViewController.swift in Sources */,
 				A3FB573B1AF6590700487899 /* FoodPin.xcdatamodeld in Sources */,
+				A3FB573F1AF679B400487899 /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
